@@ -16,7 +16,7 @@ class Pokemon
   end
 
   def self.find(id, db)
-    
+    array = db.execute("SELECT name, type FROM pokemon WHERE id  #{id}")
     binding.pry
   end
 
