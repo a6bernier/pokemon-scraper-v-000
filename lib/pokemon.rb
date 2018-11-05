@@ -17,6 +17,7 @@ class Pokemon
 
   def self.find(id, db)
     array = db.execute("SELECT name, type FROM pokemon WHERE id  #{id}")
+    self.new(id: id, name: array[0][0], type: array[0][1], db: db)
   end
 
 
